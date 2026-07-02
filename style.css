@@ -3,16 +3,20 @@ body{
     background:#f4f4f4;
     margin:0;
     padding:0;
+    color:#333;
+    line-height:1.6;
 }
 
 .container{
     width:80%;
+    max-width:1100px;
     margin:auto;
     background:white;
     padding:30px;
-    margin-top:20px;
-    margin-bottom:20px;
-    border-radius:10px;
+    margin-top:30px;
+    margin-bottom:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 h1{
@@ -32,22 +36,194 @@ pre{
     background:#f0f0f0;
     padding:15px;
     border-radius:5px;
+    overflow:auto;
 }
 
-/* Video Demonstration */
+/* ---------------- Video Demonstration ---------------- */
 
 .video-container{
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    margin: 20px auto;
+    position:relative;
+    width:100%;
+    max-width:800px;
+    aspect-ratio:16 / 9;
+    margin:20px auto;
 }
 
 .video-container iframe{
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ---------------- Hero Section ---------------- */
+
+.hero{
+    background:linear-gradient(135deg,#0066cc,#0099ff);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.hero-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.hero h1{
+    color:white;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    color:white;
+    font-size:1.6rem;
+    font-weight:400;
+    margin-bottom:25px;
+}
+
+.hero-text{
+    font-size:1.15rem;
+    max-width:750px;
+    margin:auto;
+    margin-bottom:35px;
+    line-height:1.8;
+}
+
+.badge{
+    display:inline-block;
+    background:white;
+    color:#0066cc;
+    padding:10px 20px;
+    border-radius:40px;
+    font-weight:bold;
+    margin-bottom:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ---------------- Buttons ---------------- */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 32px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn.primary{
+    background:white;
+    color:#0066cc;
+}
+
+.btn.primary:hover{
+    background:#f3f3f3;
+    transform:translateY(-3px);
+}
+
+.btn.secondary{
+    background:transparent;
+    color:white;
+    border:2px solid white;
+}
+
+.btn.secondary:hover{
+    background:white;
+    color:#0066cc;
+    transform:translateY(-3px);
+}
+
+/* ---------------- Sections ---------------- */
+
+.about{
+    margin-bottom:40px;
+}
+
+h3{
+    color:#0066cc;
+    margin-top:40px;
+    margin-bottom:15px;
+    border-left:5px solid #0066cc;
+    padding-left:12px;
+}
+
+/* ---------------- Lists ---------------- */
+
+ul li{
+    margin-bottom:10px;
+}
+
+/* ---------------- Images ---------------- */
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+    margin:25px auto;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+img:hover{
+    transform:scale(1.02);
+}
+
+/* ---------------- Links ---------------- */
+
+a{
+    color:#0066cc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+a:hover{
+    color:#004c99;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media(max-width:768px){
+
+    .container{
+        width:92%;
+        padding:20px;
+    }
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero h2{
+        font-size:1.2rem;
+    }
+
+    .hero-text{
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:220px;
+        text-align:center;
+    }
 }
